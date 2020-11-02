@@ -11,7 +11,7 @@ alert(s);
 остатка от деления. */
 var c1 = prompt("Введите двухзначное число?");
 console.log(parseInt(c1 / 10));
-console.log(c1 % 2 || c1 % 5);
+console.log(c1 % 10);
 
 // Задание №3.
 // Даны два целых числа: a, b. 
