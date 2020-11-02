@@ -11,23 +11,22 @@ alert(s);
 остатка от деления. */
 var c1 = prompt("Введите двухзначное число?");
 console.log(parseInt(c1 / 10));
-console.log(c1 % 6);
+console.log(c1 % 2 || c1 % 5);
 
 // Задание №3.
 // Даны два целых числа: a, b. 
 //Проверьте истинность высказывания: a > 2 и b ≤ 3.
 var a = prompt("enter number a");
 var b = prompt("enter number b");
-console.log(a > 2);
-console.log(b <= 3);
+console.log(a > 2 && b <= 3);
 
 // Задание №4.
 // Даны три целых числа: a, b, c. Проверьте истинность 
 // высказывания: a < b < c.
 var c = prompt("enter number c");
-console.log( a < b < c);
+console.log( a < b && b < c);
 // Задание №5.
 // Дано целое положительное число. Проверьте истинность высказывания: данное
 // число является нечетным трехзначным.
 var num = prompt("enter number");
-console.log(num >100 && num % 2);
+console.log(Boolean(num >100 && num % 2 || num % 3));
