@@ -29,4 +29,4 @@ console.log( a < b && b < c);
 // Дано целое положительное число. Проверьте истинность высказывания: данное
 // число является нечетным трехзначным.
 var num = prompt("enter number");
-console.log(Boolean(num >100 && num % 2 || num % 3));
+console.log(Boolean(num >99 && num % 2 === 1 || num < 1000));
