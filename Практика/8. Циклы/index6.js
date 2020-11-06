@@ -6,9 +6,10 @@
 
 var a2 = 5;
 var b2 = 10;
+var step=1;
 for (var i = a2; i <= b2; i++){
-	do{
+	for(var k = 1; k <= step; k++){
 		console.log(i);
-		i++;
-	} while(i <= b2);
-	}
+			}
+	step++;
+}
