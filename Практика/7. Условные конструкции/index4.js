@@ -16,5 +16,6 @@ switch(k){
 		break;
 	case 5: console.log("отлично");
 		break;
-	default: console.log("ошибка")
+	default: console.log("ошибка");
+		break;
 }
