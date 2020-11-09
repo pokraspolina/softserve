@@ -9,13 +9,13 @@ var op = Number(prompt("give me op?"));
 calc(a, b, op);
 function calc(a, b, op){
 	switch(op){
-		case 1: console.log(a - b);
+		case 1: return a - b;
 			break;
-		case 2: console.log(a * b);
+		case 2: return a * b;
 			break;
-		case 3: console.log(a / b);
+		case 3: return a / b;
 			break;
-		default: console.log(a + b);
+		default: return a + b;
 			break;
 	}
 }

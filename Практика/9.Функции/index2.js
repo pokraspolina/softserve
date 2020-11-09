@@ -8,9 +8,9 @@ y = Number(y);
 minMax(x,y);
 function minMax(x,y){
 	if (x > y){
-		console.log(x);
+		return x;
 	} else {
-		console.log(y);
+		return y;
 	}
 
 }

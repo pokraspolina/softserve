@@ -10,10 +10,10 @@ x = Number(x);
 sign(x);
 function sign(x){
 	if (x < 0) {
-		console.log(-1);
+		return -1;
 	} else if (x > 0){
-		console.log(1);
+		return 1;
 	} else {
-		console.log(0);
+		return 0;
 	}
 }

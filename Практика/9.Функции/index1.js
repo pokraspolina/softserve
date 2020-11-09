@@ -11,7 +11,7 @@ function pow(x,n){
 	for (var i = 1; i <= n; i++){
 		mul = mul * x;
 	}
-	console.log(mul);
+	return mul;
 }
 
 
