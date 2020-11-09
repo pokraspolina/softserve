@@ -6,13 +6,15 @@
 // цифр в числе k меньше n, то функция возвращает -1.
 
 function digitN(k, n){
+	
 	for (var i = 1; i < n; i++){
 		k = parseInt(k  / 10);
 	}
-	k = k % 10;
-	console.log (k);
 	if (k<n){
-		console.log( -1);
+		return -1;
+	} else{
+	k = k % 10;
+	return k;
 	}
  }
 
