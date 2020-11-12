@@ -1,12 +1,12 @@
 // Задание №1.
 // Есть следующий код:
 function createArrayIterator(array) {
-	function itr() {
-		for (var i = 0; i !=arr.lenght; i++){
-			return arr[i];
-		}
+	var i = 0;
+	return function(){
+		var step = arr[i];
+		i++;
+		return step;
 	}
-	return itr;
 }
 
 var arr = [5, 3, 7];
