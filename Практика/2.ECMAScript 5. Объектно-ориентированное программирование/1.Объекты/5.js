@@ -1,15 +1,25 @@
-var  info = {
-	name:["John", "Bill", "Mike"],
-	age:[28, 30, 32],
-	experience: [1, 5, 4],
-	languages: [
-		"Java, JavaScript, SQL",
-		"HTML, CSS, JavaScript",
-		"Python, SQL"	
-	]
-}
+var  info = [];
+	
+info[0] = people1 = {
+		name :"John", 
+		age : 28,
+		year : 1,
+		lang : [ "Java", "JavaScript", "SQL"],
+	}
+info[1] = people2 = {
+		name :"Bill",
+		age : 30,
+		year : 5,
+		lang : ["HTML", "CSS", "JavaScript"],
+	}
+info[2] = people3 = {		
+		name :"Mike",
+		age : 32,
+		year : 4,
+		lang : ["Python", "SQL"],
+	}
 
-console.log(info.name[1]);//Bill
-console.log(info.age[0]);//21
-console.log(info.experience[2]);//4
-console.log(info.languages[1]);//HTML, CSS, JavaScript
+
+console.log(info[0]);
+console.log(info[1]);
+console.log(info[2]);
