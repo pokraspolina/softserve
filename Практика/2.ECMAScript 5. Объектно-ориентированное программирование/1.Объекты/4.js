@@ -1,7 +1,7 @@
 // Создайте объект, который описывает MP3 плеер.
 var MP3 = {
 	currentMusic : 1,
-	stopMusic = null;
+	stopMusic : null,
 	nextMusic : function(){
 		MP3.currentMusic = MP3.currentMusic + 1;
 		},
