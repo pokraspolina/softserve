@@ -11,13 +11,11 @@ var  user = {
 	]
 }
 function isEmpty(obj){
+	
 	for(var key in user){
-		if (user[key] = 0){
-			return true;	// выводит ?!undefined?!
-		} else {
-			return false;
-		}
+		return false;	
 	}
+	return true;
 }
 
 console.log(isEmpty());
