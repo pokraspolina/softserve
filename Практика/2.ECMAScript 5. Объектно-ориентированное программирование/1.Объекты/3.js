@@ -11,15 +11,12 @@ var tv = {
 	currentChannel : 1,
 	nextChannel : function(){
 		tv.currentChannel = tv.currentChannel + 1;
-		return ("Текущий канал " + tv.currentChannel );
 	},
 	previousChannel : function(){
 		tv.currentChannel = tv.currentChannel -1;
-		return ("Текущий канал " +  tv.currentChannel);
 	},
 	setChannel :function(number){
 		tv.currentChannel = number;
-		return ("Текущий канал " + tv.currentChannel);
 	}
 }
 console.log(tv.currentChannel);// 1
