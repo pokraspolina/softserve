@@ -2,15 +2,21 @@
 var MP3 = {
 	currentMusic : 1,
 	stopMusic : null,
+	playPause : function(){
+		MP3.playPause = MP3.currentMusic;
+	}
+	soundMusic : function (i){
+		MP3.soundMusic = 1;
+		if (i = "+"){
+			MP3.soundMusic = MP3.soundMusic + 1;
+		} else {
+			MP3.soundMusic = MP3.soundMusic - 1;
+		}
+	}
 	nextMusic : function(){
 		MP3.currentMusic = MP3.currentMusic + 1;
-		},
+	},
 	previousMusic : function(){
 		MP3.currentMusic = MP3.currentMusic -1;
-		},
+	}
 }
-
-console.log("Сейчас играет песня: " + MP3.currentMusic);// 1
-console.log(MP3.nextMusic());// 2
-console.log(MP3.previousMusic());//1
-console.log(MP3.stopMusic());//1
