@@ -6,20 +6,20 @@
 // 3. mul() возвращает произведение этих двух значений.
 var calculator = {
 // Ваш код
+	a : 0,
+	b : 0,
 	read : function(){
-		a = Number(prompt("Give me a"));
-		b = Number(prompt("Give me b"));
-		return a, b;
+		this.a = Number(prompt("Give me a"));
+		this.b = Number(prompt("Give me b"));
 	},
-	a : this.a,
-	b : this.b,
+	
 	sum : function (){
-		sum = a + b;
+		sum = this.a + this.b;
 		return "Сумма: " + sum;
 
 	},
 	mul : function (){
-		mul = a * b;
+		mul = this.a * this.b;
 		return "Произведение: " + mul;
 
 	}
