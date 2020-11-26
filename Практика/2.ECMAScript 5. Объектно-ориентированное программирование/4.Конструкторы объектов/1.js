@@ -27,4 +27,7 @@ function Music (name, volume, currentMusic, status) {
 }
 
 var lg = new Music("LG", 5, 3, true);
+lg.on();
+lg.increaseVolume();
+lg.nextMusic();
 // var samsung = new Music("Samsung", 1, 1, false);
