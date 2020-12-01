@@ -17,28 +17,32 @@ function Summator(){
 	this.__secondNumber = 0;
 	this.result = 0;
 };
-Summator.prototype.__calc = function(__firstNumber,__secondNumber){
-	this.result = __firstNumber + __secondNumber;
+Summator.prototype.__calc = function(){
+	this.result = this.__firstNumber + this.__secondNumber;
 };
 Summator.prototype.getFirstNumber = function(){
 	return this.__firstNumber;
 };
 Summator.prototype.setFirstNumber = function(value){
-	if(typeof value === "number" && !isNaN(value)){
+	if(this._Validator(value)){
 		this.__firstNumber = value;
+		this.__calc();
 	}
 };
 Summator.prototype.getSecondNumber = function(){
 	return this.__secondNumber;
 };
 Summator.prototype.setSecondNumber = function(value){
-	if(typeof value === "number" && !isNaN(value)){
+	if(this._Validator(value)){
 		this.__secondNumber = value;
+		this.__calc();
 	}
 };
-Summator.prototype._Validator = function(){
-	if(this.__firstNumber === value && this.__secondNumber === value){
-		Summator.prototype.__calc(__firstNumber,__secondNumber);
+Summator.prototype._Validator = function(value){ // не работает с контекстом
+	if(typeof value === "number" && !isNaN(value)){
+		return true;		
+	} else {
+		return false;
 	}
 }
 
