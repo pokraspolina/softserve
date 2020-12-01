@@ -1,15 +1,23 @@
 "use strict"
+
 var user = {
-   name: "Tom"
+    name: "Tom"
 };
+
 function format(beginMsg, endMsg) {
-   console.log(beginMsg + this.name + endMsg);
+    console.log(beginMsg + this.name + endMsg);
 }
-var tomFormat = function(){
-	format(user.name);//"Tomundefined"
+
+//тебе надо функция, которая внутри вызовет format с контекстом user
+var tomFormat = function(beginMsg, endMsg) {
+    format.call(user, beginMsg, endMsg);
 }
-//var tomFormat = format.bind(user); // "<<<Tom>>>"
+
 tomFormat("<<<", ">>>"); 
+
+//2. Метод bind().*/
+//var tomFormat = format.bind(user); 		// "<<<Tom>>>"
+
 
 
 /*Привяжите функцию format() к объекту user.
