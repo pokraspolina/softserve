@@ -32,11 +32,11 @@ function Cube() {
 Cube.prototype = Object.create(Square.prototype);
 Cube.prototype.constructor = Cube;
 //1. Без расширения (полностью переопределить метод родителя);
-Cube.prototype.perimeter1 = function() {
+Cube.prototype.perimeter = function() {
     return 12 * this.__side;
 };
 //2. С расширением (использовать результат метода родителя для дальнейших расчетов).
-Cube.prototype.perimeter2 = function() {
+Cube.prototype.perimeter = function() {
     return 3 * Square.prototype.perimeter.call(this);
 }
 
