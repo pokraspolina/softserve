@@ -12,18 +12,18 @@
 2. С расширением (использовать результат метода родителя для дальнейших расчетов).*/
 
 function Square() {
-    this.__side = null;
+    this._side = null;
 };
 Square.prototype._getSide = function() {
-    return this.__side;
+    return this._side;
 };
 Square.prototype._setSide = function(value) {
     if (typeof value === "number" && value > 0 && !isNaN(value)) {
-        this.__side = value;
+        this._side = value;
     }
 };
 Square.prototype.perimeter = function() {
-    return 4 * this.__side;
+    return 4 * this._side;
 };
 
 function Cube() {
@@ -33,7 +33,7 @@ Cube.prototype = Object.create(Square.prototype);
 Cube.prototype.constructor = Cube;
 //1. Без расширения (полностью переопределить метод родителя);
 Cube.prototype.perimeter = function() {
-    return 12 * this.__side;
+    return 12 * this._side;
 };
 //2. С расширением (использовать результат метода родителя для дальнейших расчетов).
 Cube.prototype.perimeter = function() {
