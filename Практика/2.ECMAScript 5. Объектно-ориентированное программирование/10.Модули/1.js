@@ -52,5 +52,5 @@ var square = (function () {
    }
 }());
 
-console.log(perimeter.operation(5,true))//18
+console.log(perimeter.operation(5,4))//18
 console.log(square.operation(5,4))//20
