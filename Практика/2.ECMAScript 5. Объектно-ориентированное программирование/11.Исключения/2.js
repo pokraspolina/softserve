@@ -7,34 +7,32 @@
  данной функции.*/
 
 function sumSliceArray(arr, first, second) {
-    if (typeof first === "number" && first >= 0 && typeof second === "number" && second >= 0) {
+    if (typeof first === "number" && first >= 0 &&
+        typeof second === "number" && second >= 0) {
         var sum = arr[first] + arr[second];
+        return sum;
     } else {
         throw new Error("One of the parameters isn`t a number");
     }
     if (first < arr.length && second < arr.length) {
-        sum = arr[first] + arr[second];
+        return sum;
     } else {
         throw new Error("Number is greater than the length of the array!");
     }
-    return sum;
 }
+
+
+function isSumSliceArray(arr, first, second) {
+    if (typeof first === "number" &&
+        typeof second === "number") {
+        sumSliceArray(arr, first, second);
+    }
+}
+
 var arr = [1, 2, 3, 4, 5];
-try {
-	var res = sumSliceArray();
-    typeof first === "number";
-    typeof second === "number";
-    first < arr.length;
-    second < arr.length;
-    console.log(res);
 
-} catch (error) {
-    console.log(error.name);
-    console.log(error.message);
-    console.log(error.stack);
-}
 
-console.log(sumSliceArray(arr, 0, 2));		// 4
-console.log(sumSliceArray(arr, 0, 4)); 		// 6
-console.log(sumSliceArray(arr, 0, "2"));	// some Error
-console.log(sumSliceArray(arr, 0, 5)); 		// some Error done
+console.log(isSumSliceArray(arr, 0, 2)); // 4
+console.log(isSumSliceArray(arr, 0, 4)); // 6
+// console.log(isSumSliceArray(arr, 0, "2"));	// some Error
+// console.log(isSumSliceArray(arr, 0, 5)); 		// some Error done
