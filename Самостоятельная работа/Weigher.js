@@ -13,7 +13,9 @@
          setWeight(value: Number ) : void    DONE*/
 
 
-function Weigher(name, state){
+
+
+function Weigher(name){
    this._name = name;
    this._state = false;
    this._weight = 0;
@@ -25,18 +27,21 @@ Weigher.prototype.getState = function(){
    return this._state;
 }
 Weigher.prototype.setState = function(value){
-   if(typeof value === "boolean" && !isNaN(value)){
+   if(typeof value === "boolean"){
       this._state = value;
    }
 }
 Weigher.prototype.on = function (){
    if(this._state === true){
       this.getState();
+      return this.setWeight();
    }
 }
 Weigher.prototype.off = function (){
    if(this._state === false){
-      this.getState();
+      this._weight = 0;
+      return this.getState();
+      
    }
 }
 Weigher.prototype.getWeight = function(){
