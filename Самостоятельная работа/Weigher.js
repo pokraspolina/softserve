@@ -11,44 +11,40 @@
          off() : void                        DONE
          getWeight() : Number                DONE
          setWeight(value: Number ) : void    DONE*/
-
-
-
-
-function Weigher(name){
-   this._name = name;
-   this._state = false;
-   this._weight = 0;
+function Weigher(name) {
+    this._name = name;
+    this._state = false;
+    this._weight = 0;
 };
-Weigher.prototype.getName = function(){
-   return this._name;
+Weigher.prototype.getName = function() {
+    return this._name;
 }
-Weigher.prototype.getState = function(){
-   return this._state;
+Weigher.prototype.getState = function() {
+    return this._state;
 }
-Weigher.prototype.setState = function(value){
-   if(typeof value === "boolean"){
-      this._state = value;
-   }
+Weigher.prototype.setState = function(value) {
+    if (typeof value === "boolean") {
+        this._state = value;
+    }
 }
-Weigher.prototype.on = function (){
-   if(this._state === true){
-      this.getState();
-      return this.setWeight();
-   }
+Weigher.prototype.on = function() {
+    if (this._state === true) {
+        console.log("Весы сейчас:", this.getState());
+        console.log("Ваш вес:", this.getWeight(), "кг");
+    }
 }
-Weigher.prototype.off = function (){
-   if(this._state === false){
-      this._weight = 0;
-      return this.getState();
-      
-   }
+Weigher.prototype.off = function() {
+    if (this._state === false) {
+        this._weight = 0;
+        console.log("Весы сейчас:", this.getState());
+
+    }
 }
-Weigher.prototype.getWeight = function(){
-   return this._weight;
+Weigher.prototype.getWeight = function() {
+    return this._weight;
 }
-Weigher.prototype.setWeight = function(value){
-   if(typeof value === "number" && !isNaN(value)){
-      this._weight = value;
-   }
+Weigher.prototype.setWeight = function(value) {
+    if (typeof value === "number" && !isNaN(value)) {
+        this._weight = value;
+    }
 }
