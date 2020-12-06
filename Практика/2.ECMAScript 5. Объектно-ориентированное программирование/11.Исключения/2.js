@@ -25,7 +25,7 @@ function sumSliceArray(arr, first, second) {
 function isSumSliceArray(arr, first, second) {
     if (typeof first === "number" &&
         typeof second === "number") {
-        sumSliceArray(arr, first, second);
+        return sumSliceArray(arr, first, second);
     }
 }
 
