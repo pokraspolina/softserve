@@ -34,5 +34,5 @@ var arr = [1, 2, 3, 4, 5];
 
 console.log(isSumSliceArray(arr, 0, 2)); // 4
 console.log(isSumSliceArray(arr, 0, 4)); // 6
-// console.log(isSumSliceArray(arr, 0, "2"));	// some Error
-// console.log(isSumSliceArray(arr, 0, 5)); 		// some Error done
+console.log(isSumSliceArray(arr, 0, "2"));	// some Error
+console.log(isSumSliceArray(arr, 0, 5)); 		// some Error done
