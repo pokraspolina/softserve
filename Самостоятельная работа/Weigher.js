@@ -27,17 +27,16 @@ Weigher.prototype.setState = function(value) {
         this._state = value;
     }
 }
-Weigher.prototype.on = function() {
+Weigher.prototype.on = function(value) {
     if (this._state === true) {
-        console.log("Весы сейчас:", this.getState());
-        console.log("Ваш вес:", this.getWeight(), "кг");
+        this._state ="Весы сейчас включены";
+        this.setWeight(value);
     }
 }
 Weigher.prototype.off = function() {
     if (this._state === false) {
         this._weight = 0;
-        console.log("Весы сейчас:", this.getState());
-
+        this._state ="Весы сейчас выключены";
     }
 }
 Weigher.prototype.getWeight = function() {
