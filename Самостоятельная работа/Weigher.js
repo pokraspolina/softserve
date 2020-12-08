@@ -1,12 +1,13 @@
 /*   класс Weigher
       состояние
          _name : String                      DONE
-         _state : Boolean(true/false)                     DONE
+         _state : Boolean(true/false)        DONE
          _weight : Number (0 - 150)          DONE
       поведение
          getName() : String                  DONE
          getState() : Boolean                DONE
-         on(value) : void                    DONE
+         setState(value: Boolean) : void
+         on() : void                         DONE
          off() : void                        DONE
          getWeight() : Number                DONE
          setWeight(value: Number ) : void    DONE*/
@@ -21,9 +22,11 @@ Weigher.prototype.getName = function() {
 Weigher.prototype.getState = function() {
     return this._state;
 }
-Weigher.prototype.on = function(value) {
+Weigher.prototype.setState = function(value) {
+    this._state = value;
+}
+Weigher.prototype.on = function() {
     this._state = true;
-    this.setWeight(value);
 }
 Weigher.prototype.off = function() {
     this._state = false;
