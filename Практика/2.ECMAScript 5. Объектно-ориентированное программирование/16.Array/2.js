@@ -3,8 +3,8 @@
 который сортирует массив по убыванию*/
 
 Array.prototype.sortDesc = function() {
-		arr.sort();
-		arr.reverse();
+		this.sort();
+		this.reverse();
 };
 var arr = [5, 1, 4, 2, 3];
 arr.sortDesc();
