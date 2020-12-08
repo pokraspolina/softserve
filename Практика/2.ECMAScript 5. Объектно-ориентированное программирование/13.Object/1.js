@@ -18,6 +18,6 @@ Square.prototype.valueOf = function() {
 	let a = this.x2- this.x1;
 	let b = this.y1 - this.y2;
 	let res = 2 * (a + b);
-	return `Периметр прямоугольника ${res}`
+	return res;
 };
 var s = new Square(2,2,5,1);
