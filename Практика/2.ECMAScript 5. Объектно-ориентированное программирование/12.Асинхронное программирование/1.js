@@ -14,14 +14,18 @@ function random(min, max, delay, callback) {
     if (min < max) {
         min = Math.ceil(min); //Чтобы включить min
         max = Math.floor(max); //Чтобы включить max
-        delay = setTimeout(
+        setTimeout(
             function() {
                 callback(null, Math.floor(Math.random() * (max - min + 1)) + min); //Максимум и минимум включаются
-            });
+            }, delay);
     } else {
+        setTimeout(
+            function() {
         callback(Error,null);
+    }, delay);
     }
 }
+
 
 random(1, 100, 2000, function(error, data) {
     if (error) {
