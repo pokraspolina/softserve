@@ -2,13 +2,14 @@
 2. Чертеж первого устройства
    класс Weigher
       состояние
-         _name : String             
-         _state : String            
-         _weight : Number (0 - 150) 
+         _name : String                      
+         _state : Boolean(true/false)        
+         _weight : Number (0 - 150)
       поведение
-         getName() : String         
-         getState() : Boolean       
-         on(value) : void           
-         off() : void               
-         getWeight() : Number       
+         getName() : String                  
+         getState() : Boolean                
+         setState(value: Boolean) : void
+         on() : void                         
+         off() : void                        
+         getWeight() : Number                
          setWeight(value: Number ) : void
