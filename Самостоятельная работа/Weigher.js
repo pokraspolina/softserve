@@ -1,7 +1,7 @@
 /*   класс Weigher
       состояние
          _name : String                      DONE
-         _state : String                     DONE
+         _state : Boolean(true/false)                     DONE
          _weight : Number (0 - 150)          DONE
       поведение
          getName() : String                  DONE
