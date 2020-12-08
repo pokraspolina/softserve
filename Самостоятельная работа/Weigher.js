@@ -7,7 +7,7 @@
          getName() : String                  DONE
          getState() : Boolean                DONE
          setState(value: Boolean) : void     DONE
-         on() : void                         DONE
+         on(value) : void                    DONE
          off() : void                        DONE
          getWeight() : Number                DONE
          setWeight(value: Number ) : void    DONE*/
@@ -29,15 +29,12 @@ Weigher.prototype.setState = function(value) {
 }
 Weigher.prototype.on = function(value) {
     if (this._state === true) {
-        this._state ="Весы сейчас включены";
         this.setWeight(value);
     }
 }
 Weigher.prototype.off = function() {
-    if (this._state === false) {
-        this._weight = 0;
-        this._state ="Весы сейчас выключены";
-    }
+    this._state = false
+    this._weight = 0;
 }
 Weigher.prototype.getWeight = function() {
     return this._weight;
