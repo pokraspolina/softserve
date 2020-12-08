@@ -12,7 +12,7 @@
          setWeight(value: Number ) : void    DONE*/
 function Weigher(name) {
     this._name = name;
-    this._state = "Весы сейчас выключены";
+    this._state = false;
     this._weight = 0;
 };
 Weigher.prototype.getName = function() {
@@ -22,11 +22,11 @@ Weigher.prototype.getState = function() {
     return this._state;
 }
 Weigher.prototype.on = function(value) {
-    this._state = "Весы сейчас включены";
+    this._state = true;
     this.setWeight(value);
 }
 Weigher.prototype.off = function() {
-    this._state = "Весы сейчас выключены";
+    this._state = false;
     this._weight = 0;
 }
 Weigher.prototype.getWeight = function() {
