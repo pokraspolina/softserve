@@ -26,21 +26,21 @@ function random(min, max, delay, callback) {
     }
 }
 
-
-random(1, 100, 2000, function(error, data) {
-    if (error) {
-        console.log(error.name);
-        console.log(error.message);
-        console.log(error.stack);
+function Error(){
+        console.log("Name:", Error.name);
+        console.log("Message:", Error.message);
+        console.log("Stack:", Error.stack);
+}
+random(1, 100, 2000, function(Error, data) {
+    if (Error) {
+        Error();
     } else {
         console.log(data);
     }
 });
-random(1000, 100, 3000, function(error, data) {
-    if (error) {
-        console.log("Name:", error.name);
-        console.log("Message:", error.message);
-        console.log("Stack:", error.stack);
+random(1000, 100, 3000, function(Error, data) {
+    if (Error) {
+        Error();
     } else {
         console.log(data);
     }
