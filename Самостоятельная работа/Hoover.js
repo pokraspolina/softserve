@@ -2,7 +2,7 @@
       состояние
          _name : String                      
          _state : Boolean(true/false)        
-         _mode : String
+         _mode : String 
       поведение
          getName() : String                  
          getState() : Boolean                
@@ -14,7 +14,7 @@
 function Hoover(name) {
     this._name = name;
     this._state = false;
-    this._mode = 0;
+    this._mode = "На зарядке";
 };
 Hoover.prototype.getName = function() {
     return this._name;
