@@ -1,0 +1,15 @@
+1. Второе устройство - Пылесос
+2. Чертеж второго устройства
+   класс Hoover
+      состояние
+         _name : String                      
+         _state : Boolean(true/false)        
+         _mode : Number(1-4)
+      поведение
+         getName() : String                  
+         getState() : Boolean                
+         setState(value: Boolean) : void
+         on() : void                         
+         off() : void                        
+         getMode() : String                
+         setMode(value: Number ) : void
