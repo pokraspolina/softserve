@@ -3,7 +3,7 @@
 let obj = {
    name: "obj",
    print: function () {
-      return () => {console.log(this.name)};
+      return => {console.log(this.name)};
    }
 };
 function multiCaller(func, count) {
