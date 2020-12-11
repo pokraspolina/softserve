@@ -12,24 +12,14 @@
          getMode() : String                
          setMode(value: Number(0-4) ) : void*/
 function Hoover(name) {
-    this._name = name;
-    this._state = false;
+    Devices.call(this,name);
     this._mode = "На зарядке";
 };
-Hoover.prototype.getName = function() {
-    return this._name;
-}
-Hoover.prototype.getState = function() {
-    return this._state;
-}
-Hoover.prototype.setState = function(value) {
-    this._state = value;
-}
-Hoover.prototype.on = function() {
-    this._state = true;
-}
+Hoover.prototype = Object.create(Devices.prototype);
+Hoover.prototype.constructor = Hoover;
+
 Hoover.prototype.off = function() {
-    this._state = false;
+    Devices.prototype.off.call(this);
     this._mode = "На зарядке";
 }
 Hoover.prototype.getMode = function() {

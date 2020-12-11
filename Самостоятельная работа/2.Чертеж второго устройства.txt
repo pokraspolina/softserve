@@ -4,7 +4,7 @@
       состояние
          _name : String                      
          _state : Boolean(true/false)        
-         _mode : String 
+         _mode : Number(1-4)
       поведение
          getName() : String                  
          getState() : Boolean                
@@ -12,4 +12,4 @@
          on() : void                         
          off() : void                        
          getMode() : String                
-         setMode(value: Number(0-4) ) : void
+         setMode(value: Number ) : void

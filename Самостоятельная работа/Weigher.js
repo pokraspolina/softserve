@@ -12,24 +12,13 @@
          getWeight() : Number                DONE
          setWeight(value: Number ) : void    DONE*/
 function Weigher(name) {
-    this._name = name;
-    this._state = false;
+    Devices.call(this,name);
     this._weight = 0;
 };
-Weigher.prototype.getName = function() {
-    return this._name;
-}
-Weigher.prototype.getState = function() {
-    return this._state;
-}
-Weigher.prototype.setState = function(value) {
-    this._state = value;
-}
-Weigher.prototype.on = function() {
-    this._state = true;
-}
+Weigher.prototype = Object.create(Devices.prototype);
+Weigher.prototype.constructor = Weigher;
 Weigher.prototype.off = function() {
-    this._state = false;
+    Devices.prototype.off.call(this);
     this._weight = 0;
 }
 Weigher.prototype.getWeight = function() {
