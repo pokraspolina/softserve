@@ -41,10 +41,15 @@ SmartHouse.prototype.deleteDeviceByName = function(name) {
     }
 };
 SmartHouse.prototype.offAllDevice = function() {
-   return Weigher.prototype.off.call();
+    for (var i = 0; i < this._devices.length; i++) {
+           this._devices[i].off()
+    }
 };
 
 // var sh = new SmartHouse("HOME");
 // sh.addDevice(new Hoover("Пылесос"));
 // sh.addDevice(new Weigher("Весы"));
 // console.log(sh.getDevices());
+// console.log(sh.getDeviceByName("Весы"));
+// sh.getDeviceByName("Пылесос").on();
+// sh.offAllDevice();
