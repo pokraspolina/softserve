@@ -10,40 +10,43 @@
          getDeviceByName(name): Object
          deleteDeviceByName(name): void
          offAllDevice(): void*/
-function SmartHouse(name){
-   this._name = name;
-   this._devices = [];
+function SmartHouse(name) {
+    this._name = name;
+    this._devices = [];
 }
 SmartHouse.prototype.getName = function() {
-   return this._name;
+    return this._name;
 };
 SmartHouse.prototype.addDevice = function(device) {
-   if (this._devices === null){
-      this._devices = device;
-   } else {
-      this._devices.push(device);
-}};
+
+    if (this._devices === null) {
+        this._devices = device;
+    } else {
+        this._devices.push(device);
+    }
+};
 SmartHouse.prototype.getDevices = function() {
-   return this._devices;
+    return this._devices;
 };
 SmartHouse.prototype.getDeviceByName = function(name) {
     for (var i = 0; i < this._devices.length; i++) {
-        if (name === this._devices[i]._name) {
+        if (name === this._devices[i].getName()) {
             return this._devices[i];
         }
     }
 };
 SmartHouse.prototype.deleteDeviceByName = function(name) {
     for (var i = 0; i < this._devices.length; i++) {
-        if (name === this._devices[i]._name) {
-            this._devices.splice([i]);
+        if (name === this._devices[i].getName()) {
+            this._devices.splice([i], 1);
         }
     }
 };
 SmartHouse.prototype.offAllDevice = function() {
-    for (var i = 0; i < this._devices.length; i++) {
-           this._devices[i].off()
+    function hello(value) {
+        value.off();
     }
+    this._devices.forEach(hello);
 };
 
 // var sh = new SmartHouse("HOME");
