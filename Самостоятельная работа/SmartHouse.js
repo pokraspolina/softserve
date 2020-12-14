@@ -18,12 +18,7 @@ SmartHouse.prototype.getName = function() {
     return this._name;
 };
 SmartHouse.prototype.addDevice = function(device) {
-
-    if (this._devices === null) {
-        this._devices = device;
-    } else {
         this._devices.push(device);
-    }
 };
 SmartHouse.prototype.getDevices = function() {
     return this._devices;
