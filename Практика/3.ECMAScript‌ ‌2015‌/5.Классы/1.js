@@ -9,27 +9,24 @@ class Music {
    }
     on() {
         this.status = true;
-        return "Текущий статус MP3 " + this.name + " - " + this.status;
     };
     increaseVolume() {
         this.volume++;
-        return "Текущий уровень музыки " + this.volume;
     };
     decreaseVolume() {
         this.volume--;
-        return "Текущий уровень музыки " + this.volume;
     };
     nextMusic() {
         this.currentMusic++;
-        return "Сейчас играет трек № " + this.currentMusic;
     };
     prevMusic() {
         this.currentMusic--;
-        return "Сейчас играет трек № " + this.currentMusic;
     };
 }
 
 let lg = new Music("LG", 5, 3, true);
-console.log(lg.on());
-console.log(lg.increaseVolume());
-console.log(lg.nextMusic());
+console.log(lg);
+lg.on();
+lg.increaseVolume();
+lg.nextMusic();
+console.log(lg);

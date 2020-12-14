@@ -42,9 +42,10 @@ class Circle{
 //6
 	checker (dotX, dotY){
 		if(dotX > this.centerX && dotY > this.centerY) {
-			let a = dotX - this.centerX;
-			let b = dotY - this.centerY;
+			let a = this.dotX - this.centerX;
+			let b = this.dotY - this.centerY;
 			let c = Math.sqrt(Math.pow(a) + Math.pow(b));
+			return c
 		};
 
 	};
