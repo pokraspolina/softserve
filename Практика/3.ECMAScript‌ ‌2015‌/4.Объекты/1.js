@@ -8,17 +8,21 @@
 let tv = {
     currentChannel: 1,
     nextChannel() {
-        return tv.currentChannel = tv.currentChannel + 1;
+        tv.currentChannel = tv.currentChannel + 1;
     },
     previousChannel() {
-        return tv.currentChannel = tv.currentChannel - 1;
+        tv.currentChannel = tv.currentChannel - 1;
     },
     setChannel(number) {
-        return tv.currentChannel = number;
+        tv.currentChannel = number;
     }
 }
-console.log(tv.currentChannel);// 1
-console.log(tv.nextChannel());// 2
-console.log(tv.previousChannel());//1
-console.log(tv.setChannel(5));// 5
-console.log(tv.nextChannel());// 6
+console.log(tv.currentChannel);
+tv.nextChannel();
+console.log(tv.currentChannel);
+tv.previousChannel();
+console.log(tv.currentChannel);
+tv.setChannel(5);
+console.log(tv.currentChannel);
+tv.nextChannel();
+console.log(tv.currentChannel);
