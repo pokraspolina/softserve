@@ -18,7 +18,7 @@ SmartHouse.prototype.getName = function() {
     return this._name;
 };
 SmartHouse.prototype.addDevice = function(device) {
-        this._devices.push(device);
+    this._devices.push(device);
 };
 SmartHouse.prototype.getDevices = function() {
     return this._devices;
@@ -33,15 +33,14 @@ SmartHouse.prototype.getDeviceByName = function(name) {
 SmartHouse.prototype.deleteDeviceByName = function(name) {
     for (var i = 0; i < this._devices.length; i++) {
         if (name === this._devices[i].getName()) {
-            this._devices.splice([i], 1);
+            this._devices.splice(i, 1);
         }
     }
 };
 SmartHouse.prototype.offAllDevice = function() {
-    function hello(value) {
+    this._devices.forEach((value) =>{
         value.off();
-    }
-    this._devices.forEach(hello);
+    });
 };
 
 // var sh = new SmartHouse("HOME");
