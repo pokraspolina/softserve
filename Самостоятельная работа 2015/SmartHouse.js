@@ -41,9 +41,8 @@ class SmartHouse{
         } );
     };
     offAllDevice() {
-        this._devices.forEach((value) =>
-        value.off()
-        );
+    this._devices.forEach((value) =>
+        value.off());
     };
 };
 
