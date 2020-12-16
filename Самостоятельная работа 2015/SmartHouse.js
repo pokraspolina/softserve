@@ -25,25 +25,26 @@ class SmartHouse{
         return this._devices;
     };
     getDeviceByName(name) {
-        let r;
+        let device;
         this._devices.forEach((value) =>{
             if(name === value.name){
-                r = value;
+                device = value;
             }
         });
-        return r;
+        return device;
     };
-    deleteDeviceByName(name) {
-        for (var i = 0; i < this._devices.length; i++) {
-            if (name === this._devices[i].name) {
-                this._devices.splice(i, 1);
+    deleteDeviceByName(name) { 
+        
+        this._devices.forEach((value, index) => {
+            if(name === value.name){
+                this._devices.splice(index,1);
             }
-        }
+        } );
     };
     offAllDevice() {
-        this._devices.forEach((value) =>{
-        value.off();
-    });
+        this._devices.forEach((value) =>
+        value.off()
+        );
     };
 };
 
