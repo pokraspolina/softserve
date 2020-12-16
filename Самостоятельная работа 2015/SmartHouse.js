@@ -33,8 +33,7 @@ class SmartHouse{
         });
         return device;
     };
-    deleteDeviceByName(name) { 
-        
+    deleteDeviceByName(name) {     
         this._devices.forEach((value, index) => {
             if(name === value.name){
                 this._devices.splice(index,1);
