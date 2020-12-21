@@ -9,7 +9,8 @@
             get devices(): [Object]
             getDeviceByName(name): Object
             deleteDeviceByName(name): void
-            offAllDevice(): void*/
+            offAllDevice(): void
+            delayedOff(name: String, delay: Number, callback: Function): void*/
 class SmartHouse{
     constructor(name){
         this._name = name;
@@ -33,7 +34,7 @@ class SmartHouse{
         });
         return device;
     };
-    deleteDeviceByName(name) {     
+    deleteDeviceByName(name) { 
         this._devices.forEach((value, index) => {
             if(name === value.name){
                 this._devices.splice(index,1);
@@ -41,12 +42,25 @@ class SmartHouse{
         } );
     };
     offAllDevice() {
-    this._devices.forEach((value) =>
-        value.off());
+        this._devices.forEach((value) =>
+        value.off()
+        );
+    };
+    onDevice(name, delay, callback) {
+        this._devices.forEach((value) => {
+            if(name === value.name){
+                setTimeout(()=>{
+                    callback(null,value.on())},delay)
+            } else {
+                callback(Error, null)
+                }
+        });
     };
 };
 
-//var sh = new SmartHouse("HOME");
+
+
+// var sh = new SmartHouse("HOME");
 // sh.addDevice(new Hoover("Пылесос"));
 // sh.addDevice(new Weigher("Весы"));
 // console.log(sh.devices);
